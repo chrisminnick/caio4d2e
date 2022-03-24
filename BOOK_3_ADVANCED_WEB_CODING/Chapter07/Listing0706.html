@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Arguments Passed By Value</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * Increments two numbers
+       * @param {number} number1
+       * @param {number} number2
+       */
+      function addToMyNumbers(number1, number2) {
+        number1++;
+        number2++;
+        console.log('number 1: ' + number1);
+        console.log('number 2: ' + number2);
+      }
+      let number1 = 3;
+      let number2 = 12;
+      addToMyNumbers(number1, number2); // pass the argu-ments
+      console.log('original number1: ' + number1);
+      console.log('original number2: ' + number2);
+    </script>
+  </body>
+</html>

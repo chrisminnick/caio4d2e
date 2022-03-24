@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>document properties with values</title>
+    <style>
+      .columns {
+        column-count: 6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="columns">
+      <script>
+        for (var prop in document) {
+          document.write(prop + ': ' + document[prop] + '<br>');
+        }
+      </script>
+    </div>
+  </body>
+</html>

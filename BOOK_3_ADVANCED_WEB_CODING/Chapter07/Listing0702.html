@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Get the sum</title>
+  </head>
+  <body>
+    <script>
+      /**
+       *Adds elements in an array
+       *@param {Array.<number>} numbersToAdd
+       *@return {Number} sum
+       */
+      function addNumbers(numbersToAdd) {
+        let sum = 0;
+        for (oneNumber in numbersToAdd) {
+          sum = sum + numbersToAdd[oneNumber];
+        }
+        return sum;
+      }
+      let myNumbers = [2, 4, 2, 7];
+      let myNumbers2 = [3333, 222, 111];
+      let myNumbers3 = [777, 555, 777, 555];
+      let sum1 = addNumbers(myNumbers);
+      let sum2 = addNumbers(myNumbers2);
+      let sum3 = addNumbers(myNumbers3);
+      document.write(sum1 + '<br>');
+      document.write(sum2 + '<br>');
+      document.write(sum3 + '<br>');
+    </script>
+  </body>
+</html>
