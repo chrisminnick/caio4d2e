@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Using getElementsByClassName</title>
+    <script>
+      function checkMath(result) {
+        let userMath = document.getElementById('answer1').value;
+        let errors = document.getElementsByClassName('error');
+        if (parseInt(userMath) != parseInt(result)) {
+          errors[0].innerHTML =
+            'That’s wrong. You entered ' +
+            userMath +
+            '. The answer is ' +
+            result;
+        } else {
+          errors[0].innerHTML = 'Correct!';
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <label for="number1">4+1 = </label
+    ><input type="text" id="answer1" value="" />
+    <button id="submit" onclick="checkMath(4+1);">Check your math!</button>
+    <h1 class="error"></h1>
+  </body>
+</html>
