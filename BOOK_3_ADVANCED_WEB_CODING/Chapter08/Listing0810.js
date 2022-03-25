@@ -8,9 +8,9 @@ function Person() {
   this.species = 'Homo sapien';
 }
 
-var willieNelson = new Person();
-var johnnyCash = new Person();
-var patsyCline = new Person();
+const willieNelson = new Person();
+const johnnyCash = new Person();
+const patsyCline = new Person();
 
 // Person needs more properties!
 Person.prototype.knees = 2;

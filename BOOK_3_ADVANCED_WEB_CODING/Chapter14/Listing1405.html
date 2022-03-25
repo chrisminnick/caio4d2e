@@ -10,14 +10,14 @@
       }
       function reqListener() {
         // convert the string from the file to an object with JSON.parse
-        var obj = JSON.parse(this.responseText);
+        const obj = JSON.parse(this.responseText);
         // display the object's data like any object
         document.getElementById('book_title').innerHTML = obj.book_title;
         document.getElementById('book_author').innerHTML = obj.book_author;
         document.getElementById('summary').innerHTML = obj.summary;
       }
       function documentLoader() {
-        var oReq = new XMLHttpRequest();
+        const oReq = new XMLHttpRequest();
         oReq.onload = reqListener;
         oReq.open('get', 'listing1404.json', true);
         oReq.send();

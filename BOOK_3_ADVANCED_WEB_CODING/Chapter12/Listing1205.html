@@ -6,9 +6,10 @@
         document.mathWiz.operate.addEventListener('click', validate, false);
       }
       function validate() {
-        var first = document.mathWiz.numberOne.value;
-        var second = document.mathWiz.numberTwo.value;
-        var operator = document.mathWiz.operator.value;
+        let first = document.mathWiz.numberOne.value;
+        let second = document.mathWiz.numberTwo.value;
+        let operator = document.mathWiz.operator.value;
+        let answer;
         if (/^\d+$/.test(first) && /^\d+$/.test(second)) {
           doTheMath();
         } else {
@@ -16,21 +17,21 @@
         }
       }
       function doTheMath() {
-        var first = parseInt(document.mathWiz.numberOne.value);
-        var second = parseInt(document.mathWiz.numberTwo.value);
-        var operator = document.mathWiz.operator.value;
+        let first = parseInt(document.mathWiz.numberOne.value);
+        let second = parseInt(document.mathWiz.numberTwo.value);
+        let operator = document.mathWiz.operator.value;
         switch (operator) {
           case 'add':
-            var answer = first + second;
+            answer = first + second;
             break;
           case 'subtract':
-            var answer = first - second;
+            answer = first - second;
             break;
           case 'multiply':
-            var answer = first * second;
+            answer = first * second;
             break;
           case 'divide':
-            var answer = first / second;
+            answer = first / second;
             break;
         }
         document.mathWiz.theResult.value = answer;

@@ -1,4 +1,4 @@
-var myObject = {
+const myObject = {
   var1: 'the value',
   var2: 'another value',
   var3: 'yet another',

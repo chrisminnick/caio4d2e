@@ -1,4 +1,4 @@
-var guitar = {
+let guitar = {
   bodyColor: 'black',
   scratchPlateColor: 'white',
   numberOfStrings: 6,

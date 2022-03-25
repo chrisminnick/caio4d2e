@@ -4,15 +4,15 @@
   </head>
   <body>
     <script>
-      var myChair = {
+      const myChair = {
         cushionMaterial: '',
         numberOfLegs: '',
         legHeight: '',
       };
 
       function configureChair() {
-        var userValue;
-        for (var property in myChair) {
+        let userValue;
+        for (const property in myChair) {
           if (myChair.hasOwnProperty(property)) {
             userValue = prompt('Enter a value for ' + property);
             myChair[property] = userValue;
@@ -24,7 +24,7 @@
         document.write(
           '<h2>Your chair will have the following configuration:</h2>'
         );
-        for (var property in myChair) {
+        for (const property in myChair) {
           if (myChair.hasOwnProperty(property)) {
             document.write(property + ': ' + myChair[property] + '<br>');
           }
