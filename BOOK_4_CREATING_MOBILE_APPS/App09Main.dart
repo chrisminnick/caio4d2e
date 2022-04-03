@@ -1,21 +1,25 @@
-// App09Main.dart
+// app09main.dart
 
 import 'package:flutter/material.dart';
 
-import 'App0906.dart'; // Change to App0903, App0904, and so on.
+import 'app0906.dart'; // Change to App0903, App0904, and so on.
 
-void main() => runApp(App09Main());
+void main() => runApp(const App09Main());
 
 class App09Main extends StatelessWidget {
+  const App09Main({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
   @override
   MyHomePageState createState() => MyHomePageState();
 }
@@ -62,21 +66,21 @@ class MyHomePageState extends State<MyHomePage>
       children: <Widget>[
         ElevatedButton(
           onPressed: () => controller.forward(),
-          child: Text('Forward'),
+          child: const Text('Forward'),
         ),
-        SizedBox(
+        const SizedBox(
           width: 8.0,
         ),
         ElevatedButton(
           onPressed: () => controller.animateBack(0.0),
-          child: Text('Backward'),
+          child: const Text('Backward'),
         ),
-        SizedBox(
+        const SizedBox(
           width: 8.0,
         ),
         ElevatedButton(
           onPressed: () => controller.reset(),
-          child: Text('Reset'),
+          child: const Text('Reset'),
         ),
       ],
     );

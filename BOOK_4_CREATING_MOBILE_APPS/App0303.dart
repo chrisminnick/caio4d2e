@@ -3,16 +3,19 @@ import 'package:flutter/material.dart';
 main() => runApp(App0303());
 
 class App0303 extends StatelessWidget {
+  const App0303({Key? key}) : super(key: key);
+
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-            title: Text("My First Scaffold"),
+            title: const Text("My First Scaffold"),
           ),
-          body: Center(
+          body: const Center(
             child: Text("Hello world!"),
           ),
-          drawer: Drawer(
+          drawer: const Drawer(
             child: Center(child: Text("I'm a drawer.")),
           )),
     );

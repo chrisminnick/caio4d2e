@@ -1,11 +1,11 @@
-// App0803.dart
+// app0803.dart
 
 import 'package:flutter/material.dart';
 
-import 'App08Main.dart';
+import 'app08main.dart';
 
 extension MoreMovieTitlePage on MovieTitlePageState {
-  static bool _isFavorite = true; // You can change this to false.
+  static bool _isFavorite = false; // You can change this to false.
 
   goToDetailPage() {
     Navigator.push(

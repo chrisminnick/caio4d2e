@@ -1,8 +1,8 @@
-// App0610.dart -- BAD CODE
+// app0610.dart -- BAD CODE
 
 import 'package:flutter/material.dart';
 
-import 'App06Main.dart';
+import 'app06main.dart';
 import 'constraints_logger.dart';
 
 Widget buildColumn(BuildContext context) {

@@ -1,8 +1,8 @@
-// App0808.dart
+// app0808.dart
 
 import 'package:flutter/material.dart';
 
-import 'App08Main.dart';
+import 'app08main.dart';
 
 const Map<String, String> synopses = {
   'Casablanca':

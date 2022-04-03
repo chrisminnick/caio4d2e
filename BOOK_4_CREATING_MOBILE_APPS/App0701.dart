@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(App0701());
+void main() => runApp(const App0701());
 
 class App0701 extends StatelessWidget {
+  const App0701({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -29,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Are you compatible with Doris?"),
+        title: const Text("Are you compatible with Doris?"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -48,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _buildAgeSwitch() {
     return Row(
       children: <Widget>[
-        Text("Are you 18 or older?"),
+        const Text("Are you 18 or older?"),
         Switch(
           value: _ageSwitchValue,
           onChanged: _updateAgeSwitch,

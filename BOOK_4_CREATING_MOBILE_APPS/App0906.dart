@@ -1,8 +1,8 @@
-// App0906.dart
+// app0906.dart
 
 import 'package:flutter/material.dart';
 
-import 'App09Main.dart';
+import 'app09main.dart';
 
 double distanceFromLeft = 100;
 double distanceFromTop = 100;

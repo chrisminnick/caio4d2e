@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(App0706());
+void main() => runApp(const App0705());
 
-class App0706 extends StatelessWidget {
+class App0705 extends StatelessWidget {
+  const App0705({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -70,13 +74,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Are you compatible with Hilda?"),
+        title: const Text("Are you compatible with Hilda?"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: <Widget>[
-            SizedBox(
+            const SizedBox(
               height: 30.0,
             ),
             _buildRelationshipDropdown(),
@@ -93,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Text("What kind of relationship are you looking for?"),
+        const Text("What kind of relationship are you looking for?"),
         _buildDropdownButtonRow(),
       ],
     );
@@ -110,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         if (_relationshipDropdownValue != Relationship.None)
           TextButton(
-            child: Text(
+            child: const Text(
               "Reset",
               style: TextStyle(color: Colors.blue),
             ),
@@ -130,7 +134,7 @@ class _MyHomePageState extends State<MyHomePage> {
         color: Colors.pink,
       );
     } else {
-      return SizedBox();
+      return const SizedBox();
     }
   }
 

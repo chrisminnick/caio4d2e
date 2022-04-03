@@ -1,10 +1,12 @@
-// App0603.dart
+// app0603.dart
 
 import 'package:flutter/material.dart';
 
-void main() => runApp(App0602());
+void main() => runApp(const App0603());
 
-class App0602 extends StatelessWidget {
+class App0603 extends StatelessWidget {
+  const App0603({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

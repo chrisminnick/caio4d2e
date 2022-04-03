@@ -1,8 +1,8 @@
-// App0613.dart
+// app0613.dart
 
 import 'package:flutter/material.dart';
 
-import 'App06Main.dart';
+import 'app06main.dart';
 
 Widget buildColumn(context) {
   if (MediaQuery.of(context).orientation == Orientation.landscape) {

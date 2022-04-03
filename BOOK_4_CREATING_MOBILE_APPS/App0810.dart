@@ -1,11 +1,11 @@
-// App0810.dart
+// app0810.dart
 
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 
-import 'App08Main.dart';
+import 'app08main.dart';
 
 extension MoreMovieTitlePage on MovieTitlePageState {
   goToDetailPage(String movieTitle) {

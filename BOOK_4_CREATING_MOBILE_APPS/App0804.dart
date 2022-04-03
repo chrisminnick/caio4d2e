@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'App08Main.dart';
+import 'app08main.dart';
 
 extension MoreMovieTitlePage on MovieTitlePageState {
   static bool? _isFavorite;
@@ -22,20 +22,20 @@ extension MoreMovieTitlePage on MovieTitlePageState {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            const Text(
               'Being John Malkovich',
               textScaleFactor: 1.5,
             ),
             Visibility(
               visible: _isFavorite ?? false,
-              child: Icon(Icons.favorite),
+              child: const Icon(Icons.favorite),
             ),
           ],
         ),
-        SizedBox(height: 16.0),
+        const SizedBox(height: 16.0),
         ElevatedButton.icon(
-          icon: Icon(Icons.arrow_forward),
-          label: Text('Details'),
+          icon: const Icon(Icons.arrow_forward),
+          label: const Text('Details'),
           onPressed: goToDetailPage,
         ),
       ],
@@ -53,7 +53,7 @@ extension MoreDetailPage on DetailPage {
         ),
         SizedBox(height: 16.0),
         ElevatedButton(
-          child: Text(
+          child: const Text(
             'Make it a Favorite!',
           ),
           onPressed: () {

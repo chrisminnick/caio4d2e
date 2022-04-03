@@ -1,8 +1,8 @@
-// App0609.dart
+// app0609.dart
 
 import 'package:flutter/material.dart';
 
-import 'App06Main.dart';
+import 'app06main.dart';
 
 Widget buildColumn(BuildContext context) {
   return Column(

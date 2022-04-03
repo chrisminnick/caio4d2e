@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(App0703());
+void main() => runApp(const App0703());
 
 class App0703 extends StatelessWidget {
+  const App0703({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -29,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Are you compatible with Doris?"),
+        title: const Text("Are you compatible with Doris?"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -48,10 +52,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _buildLoveFlutterSlider() {
     return Column(
       children: <Widget>[
-        SizedBox(
+        const SizedBox(
           height: 10.0,
         ),
-        Text("On a scale of 1 to 10, "
+        const Text("On a scale of 1 to 10, "
             "how much do you love developing Flutter apps?"),
         Slider(
           min: 1.0,
@@ -69,10 +73,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return Row(
       children: <Widget>[
         ElevatedButton(
-          child: Text("Submit"),
+          child: const Text("Submit"),
           onPressed: _updateResults,
         ),
-        SizedBox(
+        const SizedBox(
           width: 15.0,
         ),
         Text(_messageToUser, textAlign: TextAlign.center),

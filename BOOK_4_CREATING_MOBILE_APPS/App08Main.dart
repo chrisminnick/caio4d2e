@@ -1,21 +1,25 @@
-// App08Main.dart
+// app08main.dart
 
 import 'package:flutter/material.dart';
 
-import 'App0810.dart'; // Change this line to App0803, App0804, and so on.
+import 'app0803.dart'; // Change this line to App0803, App0804, and so on.
 
-void main() => runApp(App08Main());
+void main() => runApp(const App08Main());
 
 class App08Main extends StatelessWidget {
+  const App08Main({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: MovieTitlePage(),
     );
   }
 }
 
 class MovieTitlePage extends StatefulWidget {
+  const MovieTitlePage({Key? key}) : super(key: key);
+
   @override
   MovieTitlePageState createState() => MovieTitlePageState();
 }
@@ -25,7 +29,7 @@ class MovieTitlePageState extends State<MovieTitlePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Movie Title',
         ),
       ),
@@ -46,11 +50,13 @@ class DetailPage extends StatelessWidget {
       'enters its mad and controlling world of overtaking another human '
       'body.';
 
+  const DetailPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Details',
         ),
       ),

@@ -1,8 +1,8 @@
-// App0802.dart
+// app0802.dart
 
 import 'package:flutter/material.dart';
 
-import 'App08Main.dart';
+import 'app08main.dart';
 
 extension MoreMovieTitlePage on MovieTitlePageState {
   goToDetailPage() {

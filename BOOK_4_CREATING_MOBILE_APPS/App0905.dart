@@ -1,10 +1,10 @@
-// App0905.dart
+// app0905.dart
 
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import 'App09Main.dart';
+import 'app09main.dart';
 
 extension MyHomePageStateExtension on MyHomePageState {
   Animation getAnimation(AnimationController controller) {
@@ -19,7 +19,7 @@ extension MyHomePageStateExtension on MyHomePageState {
     return Positioned(
       left: 15 * sqrt(newValue),
       top: newValue,
-      child: Icon(
+      child: const Icon(
         Icons.hot_tub,
         size: 70,
       ),

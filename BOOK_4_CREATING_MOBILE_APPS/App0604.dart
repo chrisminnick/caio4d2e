@@ -1,10 +1,12 @@
-// App0604.dart
+// app0604.dart
 
 import 'package:flutter/material.dart';
 
-void main() => runApp(App0604());
+void main() => runApp(const App0604());
 
 class App0604 extends StatelessWidget {
+  const App0604({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,8 +15,8 @@ class App0604 extends StatelessWidget {
           color: Colors.grey[50],
           child: Container(
             color: Colors.grey[500],
-            padding: EdgeInsets.all(80.0),
-            margin: EdgeInsets.all(40.0),
+            padding: const EdgeInsets.all(80.0),
+            margin: const EdgeInsets.all(40.0),
             child: Container(
               color: Colors.grey[700],
             ),

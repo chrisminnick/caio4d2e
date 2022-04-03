@@ -1,8 +1,8 @@
-// App0902.dart
+// app0902.dart
 
 import 'package:flutter/material.dart';
 
-import 'App09Main.dart';
+import 'app09main.dart';
 
 extension MyHomePageStateExtension on MyHomePageState {
   Animation getAnimation(AnimationController controller) {
@@ -18,7 +18,7 @@ extension MyHomePageStateExtension on MyHomePageState {
     return Positioned(
       left: 150.0,
       top: animation.value,
-      child: Icon(
+      child: const Icon(
         Icons.music_note,
         size: 70.0,
       ),

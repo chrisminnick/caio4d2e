@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(App0501());
+void main() => runApp(const App0501());
 
 class App0501 extends StatelessWidget {
+  const App0501({Key? key}) : super(key: key);
+
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
+  @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
@@ -25,6 +31,7 @@ class _MyHomePageState extends State {
     _pressedOrNot = "You've pressed the button.";
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(

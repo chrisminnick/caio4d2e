@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'App06Main.dart';
+import 'app06main.dart';
 
 Widget buildColumn(BuildContext context) {
   return Column(
@@ -8,7 +8,7 @@ Widget buildColumn(BuildContext context) {
     crossAxisAlignment: CrossAxisAlignment.stretch,
     children: <Widget>[
       buildTitleText(),
-      SizedBox(height: 20.0),
+      const SizedBox(height: 20.0),
       _buildCaptionedRow(),
     ],
   );

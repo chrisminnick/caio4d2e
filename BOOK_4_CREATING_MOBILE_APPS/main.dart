@@ -1,12 +1,14 @@
-// App06Main.dart
+// app06main.dart
 
 import 'package:flutter/material.dart';
 
-import 'App0602.dart'; // Change this line to App0605, App0606, and so on.
+import 'app0602.dart'; // Change this line to App0605, App0606, and so on.
 
-void main() => runApp(App06Main());
+void main() => runApp(const App06Main());
 
 class App06Main extends StatelessWidget {
+  const App06Main({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -31,7 +33,7 @@ class _MyHomePage extends StatelessWidget {
 }
 
 Widget buildTitleText() {
-  return Text(
+  return const Text(
     "My Pet Shop",
     textScaleFactor: 3.0,
     textAlign: TextAlign.center,
@@ -45,11 +47,11 @@ Widget buildRoundedBox(
   return Container(
     height: height,
     width: 88.0,
-    alignment: Alignment(0.0, 0.0),
+    alignment: const Alignment(0.0, 0.0),
     decoration: BoxDecoration(
       color: Colors.white,
       border: Border.all(color: Colors.black),
-      borderRadius: BorderRadius.all(
+      borderRadius: const BorderRadius.all(
         Radius.circular(10.0),
       ),
     ),

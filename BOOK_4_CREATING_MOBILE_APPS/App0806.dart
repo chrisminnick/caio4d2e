@@ -1,10 +1,12 @@
-// App0806.dart
+// app0806.dart
 
 import 'package:flutter/material.dart';
 
-void main() => runApp(App0806());
+void main() => runApp(const App0806());
 
 class App0806 extends StatelessWidget {
+  const App0806({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,6 +21,8 @@ class App0806 extends StatelessWidget {
 }
 
 class MovieTitlePage extends StatelessWidget {
+  const MovieTitlePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return _buildEasyScaffold(
@@ -33,6 +37,8 @@ class MovieTitlePage extends StatelessWidget {
 }
 
 class DetailPage extends StatelessWidget {
+  const DetailPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return _buildEasyScaffold(
@@ -56,6 +62,8 @@ class DetailPage extends StatelessWidget {
 }
 
 class CastPage extends StatelessWidget {
+  const CastPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return _buildEasyScaffold(
@@ -66,6 +74,8 @@ class CastPage extends StatelessWidget {
 }
 
 class ReviewsPage extends StatelessWidget {
+  const ReviewsPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return _buildEasyScaffold(

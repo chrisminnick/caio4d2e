@@ -1,44 +1,32 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(App0704());
+void main() => runApp(const App0705());
 
-class App0704 extends StatelessWidget {
+class App0705 extends StatelessWidget {
+  const App0705({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-const _youAre = 'You are';
-const _compatible = 'compatible with Irving.';
+enum Gender { Female, Male, Other, NoSelection }
+
+String show(Gender gender) => gender.toString().replaceAll("Gender.", "");
 
 class _MyHomePageState extends State<MyHomePage> {
-  late TextEditingController _nameFieldController, _incomeFieldController;
-  late String _messageToUser;
-
-  /// State
-
-  @override
-  void initState() {
-    super.initState();
-    _nameFieldController = TextEditingController();
-    _incomeFieldController = TextEditingController();
-    _messageToUser = "";
-  }
-
-  @override
-  void dispose() {
-    _nameFieldController.dispose();
-    _incomeFieldController.dispose();
-    super.dispose();
-  }
+  String _messageToUser = "";
+  Gender _genderRadioValue = Gender.NoSelection;
 
   /// Build
 
@@ -46,14 +34,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Are you compatible with Irving?"),
+        title: const Text("Are you compatible?"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: <Widget>[
-            _buildNameTextField(),
-            _buildIncomeTextField(),
+            _buildGenderRadio(),
             _buildResultArea(),
           ],
         ),
@@ -61,61 +48,66 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Widget _buildNameTextField() {
-    return Container(
-      padding: EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
-      child: TextField(
-        controller: _nameFieldController,
-        decoration: _buildDecoration("Your name:"),
-      ),
-    );
-  }
-
-  Widget _buildIncomeTextField() {
-    return Container(
-      padding: EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
-      child: TextField(
-        controller: _incomeFieldController,
-        decoration: _buildDecoration("Your income:"),
-        keyboardType: TextInputType.number,
-      ),
-    );
-  }
-
-  InputDecoration _buildDecoration(String label) {
-    return InputDecoration(
-      labelText: label,
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.all(Radius.circular(10.0)),
-      ),
+  Widget _buildGenderRadio() {
+    return Row(
+      children: <Widget>[
+        const Text("Female"),
+        Radio(
+          value: Gender.Female,
+          groupValue: _genderRadioValue,
+          onChanged: _updateGenderRadio,
+        ),
+        const SizedBox(width: 25.0),
+        const Text("Male"),
+        Radio(
+          value: Gender.Male,
+          groupValue: _genderRadioValue,
+          onChanged: _updateGenderRadio,
+        ),
+        const SizedBox(width: 25.0),
+        const Text("Other"),
+        Radio(
+          value: Gender.Other,
+          groupValue: _genderRadioValue,
+          onChanged: _updateGenderRadio,
+        ),
+      ],
     );
   }
 
   Widget _buildResultArea() {
     return Row(
       children: <Widget>[
-        RaisedButton(
-          child: Text("Submit"),
+        ElevatedButton(
+          child: const Text("Submit"),
           onPressed: _updateResults,
         ),
-        SizedBox(
+        const SizedBox(
           width: 15.0,
         ),
-        Text(_messageToUser, textAlign: TextAlign.center),
+        Text(
+          _messageToUser,
+          textAlign: TextAlign.center,
+        ),
       ],
     );
   }
 
   /// Actions
 
-  void _updateResults() {
-    bool _richUser = int.parse(_incomeFieldController.text) >= 1000000;
+  void _updateGenderRadio(Gender? newValue) {
     setState(() {
-      _messageToUser = _nameFieldController.text +
-          "\n" +
-          _youAre +
-          (_richUser ? " " : " NOT ") +
-          _compatible;
+      _genderRadioValue = newValue!;
+    });
+  }
+
+  void _updateResults() {
+    setState(() {
+      if (_genderRadioValue != Gender.NoSelection) {
+        _messageToUser = "You selected ${show(_genderRadioValue)}.";
+      } else {
+        _messageToUser = "You selected nothing yet.";
+      }
     });
   }
 }
